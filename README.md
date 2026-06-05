@@ -25,7 +25,7 @@ A consumer-to-consumer e-commerce platform built for South Africa's informal eco
 
 1. Install XAMPP
 2. Clone this repository into `C:\xampp\htdocs\me2u`
-3. Import `database/etrade_sa.sql` into phpMyAdmin
+3. Import `database/me2u.sql` into phpMyAdmin
 4. Copy `config/db.example.php` to `config/db.php`
 5. Update `config/db.php` with your local database credentials
 6. Start Apache and MySQL in XAMPP
