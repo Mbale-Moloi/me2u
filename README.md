@@ -29,7 +29,7 @@ A consumer-to-consumer e-commerce platform built for South Africa's informal eco
 4. Copy `config/db.example.php` to `config/db.php`
 5. Update `config/db.php` with your local database credentials
 6. Start Apache and MySQL in XAMPP
-7. Visit `http://localhost/me2u/pages/listings.php`
+7. Visit `http://localhost/pages/listings.php`
 
 ## Default Admin Login
 

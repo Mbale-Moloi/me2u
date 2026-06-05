@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Admin Dashboard';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 requireAdmin();
 
 //fetch total users
@@ -134,4 +134,4 @@ $recent_orders = $conn->query(
 
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>

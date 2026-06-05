@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Manage Listings';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 requireAdmin();
 
 // Fetch all products for admin management
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {  // Handle listing actions (remove/
         $stmt->execute();
     }
 
-    redirect('/me2u/admin/listings.php');
+    redirect('/admin/listings.php');
 }
 
 // Fetch all listings with seller and category details for display
@@ -117,4 +117,4 @@ $listings = $conn->query(
     <?php endif; ?>
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>

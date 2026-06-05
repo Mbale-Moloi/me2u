@@ -3,11 +3,11 @@
 $pageTitle = 'Login';
 
 // Load the header — starts session, connects database, loads functions, prints HTML top
-require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
 
 // If the user is already logged in redirect them away from the login page
 if (isLoggedIn()) {
-    redirect('/me2u/pages/listings.php');
+    redirect('/pages/listings.php');
 }
 
 // Empty string to hold any error message
@@ -48,9 +48,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             // Redirect based on role
             if ($user['role'] === 'admin') {
-                redirect('/me2u/admin/index.php');
+                redirect('/admin/index.php');
             } else {
-                redirect('/me2u/pages/listings.php');
+                redirect('/pages/listings.php');
             }
         } else {
             // Same message for wrong email or wrong password
@@ -102,4 +102,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </section>
 
 <!-- Load the footer — closes </main>, prints footer, loads JS, closes </body> and </html> -->
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
