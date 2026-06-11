@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Browse listings';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
 
 //URL GET filters
 $category_filter   = intval($_GET['category']   ?? 0);
@@ -153,4 +153,4 @@ $categories = $conn->query(
 
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>

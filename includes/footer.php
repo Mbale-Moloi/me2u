@@ -7,7 +7,7 @@
     </div>
 </footer>
 
-<script src="/assets/js/script.js"></script> <!-- tell browser to download and run javascript file -->
+<script src="/me2u/assets/js/main.js"></script> <!-- tell browser to download and run javascript file -->
 </body>
 
 </html>

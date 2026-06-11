@@ -1,10 +1,10 @@
 <?php
 $pageTitle = 'Add Listing';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . 'me2u/includes/header.php';
 requireLogin();
 
 if (!isSeller()) {
-    redirect('/pages/listings.php');
+    redirect('/me2u/me2u/me2u/pages/listings.php');
 }
 
 $errors  = [];
@@ -148,4 +148,4 @@ $categories = $conn->query(
     </form>
 </section>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/me2u/me2u/includes/footer.php'; ?>

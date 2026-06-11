@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'My Orders';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';       //users must be logged in to view their orders
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';       //users must be logged in to view their orders
 requireLogin();
 
 // Fetch orders with product, delivery, and transaction details
@@ -116,4 +116,4 @@ $status_labels = [
 
 </section>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/me2u/me2u/includes/footer.php'; ?>

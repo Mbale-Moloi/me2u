@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Manage Deliveries';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
 requireAdmin();
 
 // Fetch all deliveries with related order, product, and driver details for admin management
@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {  // Handle delivery actions (assign
         }
     }
 
-    redirect('/admin/deliveries.php');
+    redirect('/me2u/me2u/admin/deliveries.php');
 }
 
 // Fetch all deliveries with related order, product, buyer, and driver details for display in admin panel
@@ -195,4 +195,4 @@ $drivers = $conn->query(
     <?php endif; ?>
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/me2u/me2u/includes/footer.php'; ?>

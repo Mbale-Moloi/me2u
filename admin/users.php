@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Manage Users';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
 requireAdmin();
 
 
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {  // Handle user actions (verify/unv
         $stmt->execute();
     }
 
-    redirect('/admin/users.php');
+    redirect('/me2u/admin/users.php');
 }
 
 // Fetch all non-admin users for display
@@ -106,4 +106,4 @@ $users = $conn->query(
     <?php endif; ?>
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/me2u/me2u/includes/footer.php'; ?>

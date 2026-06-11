@@ -44,7 +44,7 @@ function getCurrentUser($conn)
 function requireLogin()
 {
     if (!isLoggedIn()) {
-        redirect('/etrade_sa/pages/login.php');
+        redirect('/etrade_sa/me2u/me2u/me2u/pages/login.php');
     }
 }
 
@@ -52,6 +52,6 @@ function requireLogin()
 function requireAdmin()
 {
     if (!isAdmin()) {
-        redirect('/etrade_sa/pages/login.php');
+        redirect('/etrade_sa/me2u/me2u/me2u/pages/login.php');
     }
 }

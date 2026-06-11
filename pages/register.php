@@ -1,6 +1,6 @@
 <?php
 $pageTitle = 'Register';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
 
 $errors  = [];      //displays error messages to the user
 $success = '';      //success message to show after successful registration
@@ -183,4 +183,4 @@ $provinces = $conn->query(
     </form>
 </section>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>

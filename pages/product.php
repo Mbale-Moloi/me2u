@@ -1,13 +1,13 @@
 <?php
 $pageTitle = 'Product';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/delivery.php';     // for getDeliveryOptions()
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/delivery.php';     // for getDeliveryOptions()
 
 // Get the product ID from the query string and validate it as an integer
 $product_id = intval($_GET['id'] ?? 0);
 
 if (!$product_id) {
-    redirect('/pages/listings.php');
+    redirect('/me2u/pages/listings.php');
 }
 
 // Fetch product details along with seller info and category name
@@ -29,7 +29,7 @@ $product = $stmt->get_result()->fetch_assoc();
 
 // If no product found or product is not active, redirect back to listings
 if (!$product) {
-    redirect('/pages/listings.php');
+    redirect('/me2u/pages/listings.php');
 }
 
 // Set the page title to the product title for better user experience
@@ -140,4 +140,4 @@ $reviews = $stmt->get_result()->fetch_all(MYSQLI_ASSOC);
 
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/me2u/me2u/includes/footer.php'; ?>

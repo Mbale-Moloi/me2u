@@ -1,14 +1,14 @@
 <?php
 $pageTitle = 'Checkout';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/header.php';
-require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/delivery.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/header.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/delivery.php';
 requireLogin();
 
 // Get product ID from URL and validate it
 $product_id = intval($_GET['id'] ?? 0);
 
 if (!$product_id) {
-    redirect('/pages/listings.php');
+    redirect('/me2u/pages/listings.php');
 }
 
 // Fetch product details from the database
@@ -24,7 +24,7 @@ $stmt->execute();
 $product = $stmt->get_result()->fetch_assoc();      // Fetch the product details as an associative array
 
 if (!$product) {        // If the product doesn't exist or isn't active, redirect back to listings page
-    redirect('/pages/listings.php');
+    redirect('/me2u/pages/listings.php');
 }
 
 $delivery_options = getDeliveryOptions($conn, $product_id);     // Fetch delivery options for the product
@@ -89,7 +89,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {        // Get and validate form inp
         );
         $stmt->execute();
 
-        redirect('/pages/orders.php?success=1');       // After successfully creating the order and transaction, redirect the user to the orders page with a success message
+        redirect('/me2u/pages/orders.php?success=1');       // After successfully creating the order and transaction, redirect the user to the orders page with a success message
     }
 }
 ?>
@@ -167,4 +167,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {        // Get and validate form inp
 
 </div>
 
-<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/includes/footer.php'; ?>
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/me2u/includes/footer.php'; ?>
